@@ -1,0 +1,20 @@
+鸭子类型（duck typing）是动态类型的一种风格。在这种风格中，一个对象有效的语义，不是由继承自特定的类或实现特定的接口，而是由当前方法和属性的集合决定。
+If it walks like a duck and quacks like a duck, it must be a duck.简单来说，一个对象的特征不是由其父类决定，而是由对象的属性和方法决定。
+
+example:
+
+from collections import Iterable
+from collections import Iterator
+
+class Foo:
+    def __iter__(self):
+        pass
+
+    def __next__(self):
+        pass
+
+
+print(isinstance(Foo(), Iterable)) # True
+print(isinstance(Foo(), Iterator)) # True
+
+迭代器，任何实现了 __iter__ 和 __next__方法的对象都可称之为迭代器，而不需要特定的从Iterator中继承
