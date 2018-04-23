@@ -5,7 +5,7 @@
 ```
 #singleton.py
 class Singleton:
-	def foo(self):
+    def foo(self):
 		pass
 my_singleton = Singleton()
 
