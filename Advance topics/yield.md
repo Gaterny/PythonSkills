@@ -1,7 +1,7 @@
-To understand what yield does, you must understand what generators are. And before generators come iterables.
 ### 为了理解yield的工作原理，首先需要明白生成器以及可迭代对象是什么
 
 > **可迭代对象**
+
 当你创建一个列表时，你可以从列表中一个接一个的读取元素，这种一个接一个读取元素叫做迭代。
 ```
 >>> mylist = [1, 2, 3]
@@ -26,6 +26,7 @@ These iterables are handy because you can read them as much as you wish, but you
 
 Generators
 > **生成器**
+
 Generators are iterators, a kind of iterable you can only iterate over once. Generators do not store all the values in memory, they generate the values on the fly:
 生成器也是迭代器。生成器不是存储所有的变量在内存中，而是在遍历时动态的生成，且只能被迭代一次
 ```
@@ -40,6 +41,7 @@ Generators are iterators, a kind of iterable you can only iterate over once. Gen
 It is just the same except you used () instead of []. BUT, you cannot perform for i in mygenerator a second time since generators can only be used once: they calculate 0, then forget about it and calculate 1, and end calculating 4, one by one.
 
 > **Yield**
+
 yield功能与return类似，不同的是，yield返回生成器
 ```
 >>> def createGenerator():
