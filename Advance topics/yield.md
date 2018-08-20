@@ -25,7 +25,7 @@ These iterables are handy because you can read them as much as you wish, but you
 
 Generators
 Generators are iterators, a kind of iterable you can only iterate over once. Generators do not store all the values in memory, they generate the values on the fly:
-``
+```
 >>> mygenerator = (x*x for x in range(3))
 >>> for i in mygenerator:
 ...    print(i)
