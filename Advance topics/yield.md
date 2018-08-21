@@ -67,6 +67,7 @@ tips:当使用for从生成器中迭代数据时，函数会运行直到遇到yie
 > **return与yield的区别**
 
 example:
+**return**
 ```
 def func(n):
     for i in range(n):
@@ -76,6 +77,7 @@ func(3)
 0
 ```
 
+**yield**
 ```
 def func(n):
     for i in range(n):
