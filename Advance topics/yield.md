@@ -63,3 +63,28 @@ Here it's a useless example, but it's handy when you know your function will ret
 当你调用函数时，函数体中的代码并没有运行，只是返回了一个生成器对象。只有在你调用for语句时才会从生成器中取值。
 
 tips:当使用for从生成器中迭代数据时，函数会运行直到遇到yield返回值然后停止，再一次运行会从上次停止的位置接着运行。直到所有值都被返回
+
+> **return与yield的区别**
+
+example:
+```
+def func(n):
+    for i in range(n):
+        return i
+        
+func(3)
+0
+
+```
+def func(n):
+    for i in range(n):
+        yield i
+        
+for i in func(3):
+    print(i)
+    
+0
+1
+2
+```
+return只返回其中一个，yield返回一个包含所有元素的生成器。
