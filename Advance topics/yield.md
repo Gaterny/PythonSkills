@@ -74,6 +74,7 @@ def func(n):
         
 func(3)
 0
+```
 
 ```
 def func(n):
