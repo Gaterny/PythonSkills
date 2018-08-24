@@ -85,7 +85,8 @@ $ git pull
 # 合并其他分支到当前分支
 $ git merge <branch>
 
-# git diff
+# 查看差异
+git diff
 ```
 
 ---
@@ -99,4 +100,19 @@ $ git tag 1.0.0 1b2e1d63ff
 git log
 你也可以使用少一点的提交 ID 前几位，只要它的指向具有唯一性。
 ```
+##### 版本回退
+```
+# 查看历史操作记录
+$ git log
 
+# 使用git reset回到上一个版本,回到上上个版本就是HEAD^^,回到n个版本就是HEAD~n
+$ git reset --hard HEAD^
+
+# 根据commit id到达指定版本
+$ git reset --hard 576e22b9
+
+# 使用git reflog查看每一次记录
+$ git reflog
+
+# 使用git rm删除文件和工作区中的文件
+$ git rm demo.txt
